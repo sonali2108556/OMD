@@ -1,0 +1,49 @@
+.
+├── app.js
+├── backend_structure.txt
+├── config.js
+├── data
+│   ├── commodity.js
+│   ├── index.js
+│   ├── manufacturers.js
+│   └── widgets.js
+├── graphql
+│   ├── resolvers.js
+│   └── schema.graphql
+├── model
+│   ├── cart.js
+│   ├── commodity.js
+│   ├── manufacturer.js
+│   ├── users.js
+│   └── widgets.js
+├── package.json
+├── package-lock.json
+├── public
+│   ├── images
+│   │   └── avatar
+│   │       ├── female_avatar.webp
+│   │       └── male_avatar.webp
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── resources
+│   └── constants.js
+├── routes
+│   ├── index.js
+│   └── users.js
+├── services
+│   ├── auth.js
+│   ├── cart.js
+│   ├── commodity.js
+│   ├── manufacturer.js
+│   └── widgets.js
+├── utils
+│   ├── authentication.js
+│   ├── passwordStrength.js
+│   └── statusResponse.js
+└── views
+    ├── error.jade
+    ├── index.jade
+    └── layout.jade
+
+13 directories, 33 files

@@ -1,0 +1,23 @@
+.Footer{
+    background-color: #1E1E1E;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-last{
+    background-color: #171616;
+    
+}
+.footer-style{
+    color: white;
+    font-size: 15px !important;
+    line-height: 24px !important;
+    display: block;
+    text-decoration: none;
+}
+.footer-item{
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    margin-bottom: 7px !important;
+    letter-spacing: 1.5px !important;
+}

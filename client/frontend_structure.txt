@@ -1,0 +1,89 @@
+.
+├── frontend_structure.txt
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── asset
+    │   └── images
+    │       ├── about-section1.png
+    │       ├── about-section2.png
+    │       ├── background.png
+    │       ├── bluemed.jpg
+    │       ├── crocin.avif
+    │       ├── female.webp
+    │       ├── google.png
+    │       ├── HomeMed.png
+    │       ├── insurance.png
+    │       ├── male.webp
+    │       ├── med.jpg
+    │       ├── other.jpg
+    │       ├── pricing.png
+    │       ├── section-3.jpeg
+    │       ├── section4-headingStart.png
+    │       ├── support.png
+    │       ├── tick.png
+    │       ├── trustedSecurity.png
+    │       └── untick.png
+    ├── config.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    ├── setupTests.js
+    └── views
+        ├── components
+        │   ├── Alert.js
+        │   ├── Footer.css
+        │   ├── Footer.js
+        │   ├── Layout
+        │   │   └── MainLayout.js
+        │   ├── Navbar
+        │   │   └── Navbar.js
+        │   └── SearchBar.js
+        └── pages
+            ├── AboutUs
+            │   ├── About.css
+            │   └── About.js
+            ├── CartPage
+            │   ├── Cart.css
+            │   └── Cart.js
+            ├── Commodity
+            │   ├── CommodityList.css
+            │   └── CommodityList.js
+            ├── CommodityDetailsPage
+            │   ├── commodityDetails.css
+            │   └── CommodityDetails.js
+            ├── ContactUs
+            │   ├── Contact.css
+            │   └── Contact.js
+            ├── Home
+            │   ├── components
+            │   │   ├── Section1.js
+            │   │   ├── Section2.js
+            │   │   ├── Section3.js
+            │   │   ├── Section4.js
+            │   │   ├── Section5.js
+            │   │   └── Section6.js
+            │   ├── Home.css
+            │   └── Home.js
+            ├── login
+            │   ├── Login.css
+            │   └── Login.js
+            ├── OrderPage
+            │   └── OrderPage.js
+            └── Signup
+                ├── Signup.css
+                └── Signup.js
+
+19 directories, 67 files

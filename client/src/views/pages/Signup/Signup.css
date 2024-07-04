@@ -1,0 +1,114 @@
+.signin-background-image {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../../asset/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width:1200px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+    }
+}
+
+.signin-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media only screen and (min-width:1200px) {
+        width: 50%;
+    }
+
+    z-index: 1;
+}
+
+.sign-box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-space {
+    margin-right: 10px;
+
+}
+
+.signin-link {
+    color: white;
+    text-decoration: none;
+}
+
+.gender-card .MuiFormControlLabel-root {
+    height: 140px;
+    width: 32%;
+    background-color: floralwhite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+    transition: all 200ms;
+
+    @media only screen and (max-width:1200px) {
+        height: 80px;
+        transition: all 200ms;
+    }
+}
+
+.gender-card-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    margin:10px 0 !important;
+
+}
+
+.signin-box-text {
+    width: 100%;
+    transition: all 200ms;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+@media only screen and (min-width:1200px) {
+    .signin-box-text {
+        width: 50%;
+        transition: all 200ms;
+        text-align: left;
+    }
+}
+
+.gender-card-radio .MuiRadio-root {
+    transition: all 200ms;
+    position: relative !important;
+    top: -47px;
+
+    @media only screen and (max-width:1200px) {
+        top: -20px;
+        transition: all 200ms;
+    }
+
+}
+
+.gender-card-radio .MuiFormControlLabel-label {
+    transition: all 200ms;
+    position: relative !important;
+    top: -47px;
+    left: -10px;
+    background-color: #ffffff90;
+    border-radius: 20px;
+    padding: 2px 5px;
+    @media only screen and (max-width:1200px) {
+        top: -18px;
+        transition: all 200ms;
+    }
+
+}

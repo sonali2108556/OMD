@@ -1,0 +1,34 @@
+.main-section {
+    margin-top: 100px;
+}
+
+.my-custom-checkbox .MuiCheckbox-root {
+    padding: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.my-custom-checkbox .MuiFormControlLabel-label {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    overflow-wrap: anywhere;
+    
+}
+
+.my-custom-checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.rating-star{
+    align-items: center;
+    display: flex ;
+    font-size: small;
+    justify-content: space-between;
+    background-color: #22334D;
+    color: aliceblue;
+   height: 25px;
+   padding: 0px 5px;
+    border-radius: 5px;
+   
+}

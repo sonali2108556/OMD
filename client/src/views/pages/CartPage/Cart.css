@@ -1,0 +1,48 @@
+.cartSection{
+    margin-top: 100px;
+   
+}
+.cartSection1{
+   
+    background-color: gainsboro;
+    padding: 10px;
+}
+.cartSection1-box{
+    background-color: white;
+    padding: 10px;
+   
+}
+.section1-twoBox{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    margin-top: 10px;
+    height: 100%;
+}
+.section1-button:hover{
+    background-color: #22334d !important;
+    color: white !important;
+}
+.section1-button{
+    background-color:transparent !important;
+    color:black !important;
+    border-radius:40px !important;
+    margin-top:30px !important;
+    border:1px solid darkgray!important;
+}
+.section2{
+    
+    border: 1px solid gainsboro;
+    padding: 20px;
+      
+}
+.section1LinkBorder>a{
+    text-decoration:underline solid darkgrey;
+}
+.section1-boxBorder{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+}

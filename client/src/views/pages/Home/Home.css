@@ -1,0 +1,180 @@
+.section1-background {
+    background-image: url("../../../asset/images/HomeMed.png");
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.section1-text {
+
+    color: #22334D;
+
+}
+
+.section1-getButton {
+    margin-top: 20px !important;
+    background-color: #22334D !important;
+}
+
+.section2-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #22334D;
+}
+
+.section2-mediname {
+    margin-top: 20px;
+    gap: 20px;
+    color: #22334D;
+    display: flex;
+    justify-content: center;
+
+}
+
+.mediname {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid gray;
+    color: #22334D;
+    font-size: 15px !important;
+    word-wrap: normal;
+    word-break: keep-all;
+
+}
+
+.section3-heading {
+    height: 1px;
+    background-color: #c4c4c4;
+    margin-bottom: 50px;
+    align-self: center;
+}
+
+.section3-star {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    background-color: #22334D;
+    color: aliceblue;
+    padding: 2px 12px;
+    border-radius: 15px;
+   
+}
+
+.section3-textBackground {
+    background-color: #DFE8ED;
+    padding-bottom: 0px !important;
+
+}
+
+.section3-medi {
+    background-color: #DFE8ED;
+    padding: 10px !important;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #22334D;
+    justify-content: center;
+}
+
+.primary-button {
+
+    background-color: #22334D !important;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    height:100%;
+    
+}
+
+.primary-button:hover {
+    background-color: #22334D !important;
+}
+
+.medi-card-subtitle {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+    color: gray !important;
+
+}
+
+.section-3-video {
+    padding-bottom: 50px;
+}
+
+.section-3-image {
+    background-image: url("../../../asset/images/section-3.jpeg");
+    height: 100%;
+    width: 100%;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.btn-learnMore {
+    background-color: #22334D !important;
+    margin-top: 20px !important;
+    padding: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 20px !important;
+    text-transform: capitalize !important;
+}
+
+.Section4-background {
+    background-image: url("../../../asset/images/section4-headingStart.png");
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.section4-text {
+    color: white;
+    text-align: right !important;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section4-backgroundColor {
+    background-color: #22334D !important;
+
+}
+
+.section4-RxPassButton {
+    background-color: #DA5220 !important;
+    margin-top: 40px !important;
+    padding: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 20px !important;
+    text-transform: capitalize !important;
+
+}
+
+.table-Background {
+    background-color: #DFE8ED;
+}
+
+.section5-Background{
+    background-color: #22334D !important;
+    padding-bottom: 50px;
+
+}
+.Section6-accordion{
+    
+    padding: 10px 0px !important;
+}

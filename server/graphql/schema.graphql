@@ -1,0 +1,398 @@
+type Query {
+  userById(id: ID!): UserResponse
+  userByMe: UserResponse
+  userDTO: UserListResponse
+  manufacturerList: ManufacturerListResponse
+  manufacturerListPublic: ManufacturerListResponse
+  manufacturerById(id: ID!): ManufacturerResponse
+  commodityById(id: ID!): CommodityResponse
+  commodityByIdPublic(id: ID!): CommodityResponse
+  commodityList: CommodityListResponse
+  commodityListPublic: CommodityListResponse
+  getCommodityData: CommodityDataResponse
+  widgetById(id: ID!): WidgetResponse
+  widgetList: WidgetListResponse
+  cartList: CartListResponse
+  cartById: CartResponse
+  orderById(id: ID!): OrderResponse
+  orderList: OrderListResponse
+}
+
+type Mutation {
+  createUser(firstName: String!, lastName: String, gender: String!, email: String!, password: String!): UserResponse
+  loginUser(email: String!, password: String!): UserResponse
+  deleteUser(ids: [ID]): UserResponse
+  updateUser(newData: UpdateUser): UserResponse
+  createManufacturer(manufacturerData: CreateManufacturerInput!): ManufacturerResponse
+  updateManufacturer(newData: UpdateManufacturerInput): ManufacturerResponse
+  createCommodity(commodityData: CreateCommodityInput!): CommodityResponse
+  updateCommodity(commodityData: UpdateCommodityInput): CommodityResponse
+  createWidget(widgetData: CreateWidgetInput!): WidgetResponse
+  updateWidget(widgetData: UpdateWidgetInput): WidgetResponse
+  addItemCart(commodityId: ID!, quantity: Int!): CartResponse
+  deleteFromCart(commodityId: ID!): CartResponse
+  createOrder(
+    deliveryDate: String!
+    addressLine1: String!
+    addressLine2: String
+    city: String!
+    state: String!
+    pincode: String!
+  ): OrderResponse
+  updateOrder(
+    orderId: ID!
+    status: String!
+    method: String
+    bankName: String
+    accountHolder: String
+    accountNumber: String
+    ifsc: String
+    upi: String
+    cardNo: String
+  ): OrderResponse
+}
+
+input UpdateUser {
+  id: ID!
+  phone: String
+  firstName: String
+  lastName: String
+  gender: String
+  dob: String
+  avatar: [String]
+  role: AuthRole
+  permissions: [AuthPermission]
+  isActive: Boolean
+}
+type User {
+  id: ID!
+  email: String!
+  phone: String
+  firstName: String!
+  lastName: String
+  gender: String!
+  username: String!
+  dob: String
+  avatar: [String!]!
+  role: AuthRole!
+  permissions: [AuthPermission!]!
+  isActive: Boolean
+  meta: Meta
+  token: String
+}
+
+type Meta {
+  lastLogin: String!
+  lastPasswordChange: String!
+  lastUpdated: String!
+  createdAt: String!
+}
+type UserListResponse {
+  data: [User]
+  status: Status!
+}
+type UserResponse {
+  data: User
+  status: Status!
+}
+type Status {
+  success: Boolean!
+  message: String!
+  type: String!
+  code: String!
+}
+enum AuthRole {
+  SUPERADMIN
+  ADMIN
+  MANAGER
+  THIRDPARTY
+  USER
+}
+enum AuthPermission {
+  READ
+  CREATE
+  UPDATE
+  DELETE
+  APPROVE
+}
+
+input CreateManufacturerInput {
+  name: String!
+  manufacturerId: String!
+  country: String!
+  address: AddressInput!
+  contact: ContactInput!
+  website: String
+}
+
+input UpdateManufacturerInput {
+  id: ID!
+  name: String
+  manufacturerId: String
+  country: String
+  address: AddressInput
+  contact: ContactInput
+  website: String
+}
+
+input AddressInput {
+  street: String!
+  city: String!
+  state: String!
+  postalCode: String!
+}
+
+input ContactInput {
+  email: String!
+  phone: String!
+}
+
+type Manufacturer {
+  id: ID!
+  manufacturerId: String!
+  name: String!
+  country: String!
+  address: Address!
+  contact: Contact!
+  website: String
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type Address {
+  street: String!
+  city: String!
+  state: String!
+  postalCode: String!
+}
+
+type Contact {
+  email: String!
+  phone: String!
+}
+type ManufacturerListResponse {
+  data: [Manufacturer]
+  status: Status!
+}
+
+type ManufacturerResponse {
+  data: Manufacturer
+  status: Status!
+}
+
+input CreateCommodityInput {
+  name: String!
+  price: Float!
+  discount: Float!
+  unit: String
+  sellingUnit: String
+  purchasedBy: Float
+  benefits: [BenefitsInput!]
+  manufacturer: ID!
+  dosage: String!
+  quantity: Int!
+  expiryDate: Date!
+  mfdDate: Date!
+  batchNo: String!
+  disclaimer: String!
+  photos: [String!]!
+  content: ContentInput!
+  category: String!
+  type: String!
+  sideEffects: [String!]!
+  usedFor: String!
+  rating: Float
+}
+input UpdateCommodityInput {
+  id: ID!
+  name: String
+  price: Float
+  discount: Float
+  unit: String
+  sellingUnit: String
+  purchasedBy: Float
+  benefits: [BenefitsInput]
+  manufacturer: ID
+  dosage: String
+  quantity: Int
+  expiryDate: Date
+  mfdDate: Date
+  batchNo: String
+  disclaimer: String
+  photos: [String!]
+  content: ContentInput
+  category: String
+  type: String
+  sideEffects: [String!]
+  usedFor: String
+  rating: Float
+  active: Boolean
+  approved: Boolean
+}
+
+input ContentInput {
+  details: String!
+  composition: [String!]!
+}
+input BenefitsInput {
+  title: String!
+  summary: String!
+}
+
+type Commodity {
+  id: ID!
+  name: String!
+  code: String!
+  price: Float!
+  discount: Float!
+  unit: String!
+  sellingUnit: String!
+  purchasedBy: Float!
+  benefits: [Benefits!]
+  manufacturer: Manufacturer
+  dosage: String!
+  quantity: Int!
+  expiryDate: Date!
+  mfdDate: Date!
+  batchNo: String!
+  disclaimer: String!
+  photos: [String!]!
+  content: Content!
+  category: String!
+  type: String!
+  sideEffects: [String!]!
+  usedFor: String!
+  rating: Float!
+  createdAt: Date!
+  updatedAt: Date!
+  active: Boolean!
+  approved: Boolean!
+}
+type Content {
+  details: String!
+  composition: [String!]!
+}
+type Benefits {
+  title: String!
+  summary: String!
+}
+scalar Date
+
+type CommodityListResponse {
+  data: [Commodity]
+  status: Status!
+}
+
+type CommodityResponse {
+  data: Commodity
+  status: Status!
+}
+
+type CommodityData {
+  commodities: [Commodity!]!
+  categories: [String!]!
+  compositions: [String!]!
+  types: [String!]!
+}
+type CommodityDataResponse {
+  data: CommodityData
+  status: Status!
+}
+
+input CreateWidgetInput {
+  icon: String!
+  title: String!
+  background: String!
+  description: String
+}
+input UpdateWidgetInput {
+  id: ID!
+  icon: String
+  title: String
+  background: String
+  description: String
+}
+
+type Widget {
+  id: ID!
+  icon: String!
+  title: String!
+  background: String!
+  to: String!
+  description: String
+  createdAt: Date!
+  updatedAt: Date!
+}
+type WidgetListResponse {
+  data: [Widget]
+  status: Status!
+}
+
+type WidgetResponse {
+  data: Widget
+  status: Status!
+}
+
+type Cart {
+  id: ID!
+  user: ID!
+  items: [CartItem!]
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+type CartItem {
+  commodity: Commodity!
+  quantity: Int!
+}
+type CartListResponse {
+  data: [Cart]
+  status: Status!
+}
+
+type CartResponse {
+  data: [CartItem]
+  status: Status!
+}
+
+type Order {
+  id: ID!
+  user: ID!
+  items: [CartItem!]
+  amount: Float!
+  status: String!
+  createdAt: Date!
+  updatedAt: Date!
+  payment: Payment
+  delivery: Delivery
+}
+
+type OrderResponse {
+  data: Order
+  status: Status!
+}
+
+type OrderListResponse {
+  data: [Order]
+  status: Status!
+}
+type Payment {
+  method: String
+  transactionId: String
+  createdAt: Date
+  updatedAt: Date
+  bankName: String
+  accountHolder: String
+  accountNumber: String
+  ifsc: String
+  upi: String
+  cardNo: String
+}
+type Delivery {
+  deliveryDate: String!
+  addressLine1: String!
+  addressLine2: String
+  city: String!
+  state: String!
+  pincode: String!
+}

@@ -1,0 +1,34 @@
+.section1-menu-item{
+    box-shadow: 10px 10px 20px #00000020;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section1-menu-item li{
+    font-weight: 600 !important;
+}
+.profile-img{
+    border: 1px solid black;
+     border-radius: 50%;
+      height: 120px; 
+      width: 120px; 
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      overflow: hidden;
+}
+.profile-textfield{
+    margin-top: 10px;
+    width: 100%;
+}
+.save-button-profile{
+    margin-bottom: 20px !important;
+     text-transform: capitalize !important;background-color: #22334D !important;
+     font-weight: 600 !important;
+     padding-top:10px !important ;
+     padding-bottom: 10px !important;
+
+}

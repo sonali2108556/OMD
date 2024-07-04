@@ -1,0 +1,2 @@
+export const dbUrl="mongodb+srv://sonali_admin:omd_test_sonali@cluster0.cmcydzi.mongodb.net/omd_dev?retryWrites=true&w=majority&appName=Cluster0";
+// export const dbUrl="mongodb://localhost:27017/test";

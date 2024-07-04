@@ -1,0 +1,14 @@
+.contact-section1{
+    background-image: url('../../../asset/images/about-section1.png');
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   margin-top: 100px;
+}
+.contactSection1-overlay{
+    height: 200px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
