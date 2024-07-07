@@ -45,7 +45,7 @@ const SearchBar = ({ data, fullWidth }) => {
           <SearchIcon />
         </IconButton>
 
-        <InputBase
+        <InputBase size="small"
           sx={{ ml: 1, flex: 1 }}
           onChange={handleChange}
           value={searchText}

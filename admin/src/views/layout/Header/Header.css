@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: inherit;
 }
 .profile-img{
-    height: 60px;
+    height: 40px;
     border-radius: 100%;
 }
