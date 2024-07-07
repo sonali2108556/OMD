@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import MainLayout from "./views/layout/MainLayout";
 
 function App() {
   return (
-    <Typography>
-      hello
-    </Typography>
-  );
+    <Box>
+      <MainLayout></MainLayout>
+      
+    </Box>
+
+  )
 }
 
 export default App;
