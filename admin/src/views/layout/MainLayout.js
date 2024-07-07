@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import { Box, Grid, Typography } from "@mui/material";
 import { headerHeight, sideBarOpenWidth, borderRadiusMainContent, sidebarCloseWidth } from "../../config";
 import SideBar from "./SideBar/SideBar";
+import { Outlet } from "react-router-dom";
 
 function MainLayout() {
   const [sidebarOpen, setSideBarOpen] = useState(true);
@@ -37,7 +38,7 @@ function MainLayout() {
         <Box sx={{ width: `calc(100vw - ${sideBarWidth})`, height: "inherit", backgroundColor: '#E1EBEE', borderTopLeftRadius: borderRadiusMainContent }}>
 
           <Box sx={{ padding: '5px 10px' }}>
-            <Typography variant="h6">This is main content</Typography>
+            <Outlet />
           </Box>
 
         </Box>
