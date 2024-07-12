@@ -9,3 +9,12 @@ export const getToken = () => {
 export const removeToken = () => {
   return window.localStorage.removeItem("token");
 };
+
+
+
+// const obj = {
+
+// }
+// function setitem(key,value) {
+//   obj[key]=value
+// }

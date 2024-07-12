@@ -3,8 +3,10 @@ import React from "react";
 import profileimage from "../../../assets/male.webp";
 import SearchBar from "./SearchBar";
 import "./Header.css";
+import {Link,useNavigate} from "react-router-dom";
 
 import MenuIcon from '@mui/icons-material/Menu';
+import { removeToken } from "../../../config";
 
 const settings = [
   {
@@ -26,7 +28,7 @@ const settings = [
 function Header(props) {
   const { sideBarWidth, handleSideBar, sidebarOpen } = props;
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const navigate = useNavigate("");
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -34,6 +36,13 @@ function Header(props) {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  function handleClick(id) {
+    if(id==="logout"){
+      removeToken()
+      navigate('/auth');
+    }
+  }
 
   return (
 
@@ -79,6 +88,8 @@ function Header(props) {
                 onClick={handleCloseUserMenu} >
 
                 <Typography>{settingProfile.title}</Typography>
+
+                <Button type="button" onClick={()=> handleClick(settingProfile.id) }></Button>
 
               </MenuItem>)
 
